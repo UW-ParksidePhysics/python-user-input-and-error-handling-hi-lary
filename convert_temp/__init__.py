@@ -8,27 +8,28 @@ convert_temp.calc_fahrenheitk(273)
 32.0
 """
 
+
 # F to C
 def calc_celsiusf(fahrenheit):
-    c_from_f = (fahrenheit - 32) * 5/9
+    c_from_f = (fahrenheit - 32) * 5 / 9
     return c_from_f
 
 
 # K to C
 def calc_celsiusk(kelvin):
-    c_from_k = kelvin -273
+    c_from_k = kelvin - 273
     return c_from_k
 
 
 # C to F
 def calc_fahrenheitc(celsius):
-    f_from_c = (9/5 * celsius) + 32
+    f_from_c = (9 / 5 * celsius) + 32
     return f_from_c
 
 
 # K to F
 def calc_fahrenheitk(kelvin):
-    f_from_k = ((kelvin - 273)* 9/5) + 32
+    f_from_k = ((kelvin - 273) * 9 / 5) + 32
     return f_from_k
 
 
@@ -40,7 +41,7 @@ def calc_kelvinc(celsius):
 
 # F to K
 def calc_kelvinf(fahrenheit):
-    k_from_f = ((fahrenheit - 32) * 5/9) + 273
+    k_from_f = ((fahrenheit - 32) * 5 / 9) + 273
     return k_from_f
 
 
@@ -74,9 +75,9 @@ def test_conversion():
     assert ((f_test == f) and (c_test == c))
 
 
+# f
 if __name__ == '__main__':  # having this makes it so when we can test these values in this file but other/
-    # files wont use it if convert_temp.py is imported into them
+    # files won't use it if convert_temp.py is imported into them
     print(calc_temperatures('kelvin', 273))  # output 0 and 32
     print(calc_temperatures('celsius', 0))  # output 273 and 32
     print(calc_temperatures('fahrenheit', 32))  # output 273 and 0
-
