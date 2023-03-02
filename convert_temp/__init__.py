@@ -1,4 +1,12 @@
 # exercise 4.19
+"""
+convert_temp.calc_fahrenheitc(0)
+32.0
+convert_temp.calc_kelvinf(32)
+273.0
+convert_temp.calc_fahrenheitk(273)
+32.0
+"""
 
 # F to C
 def calc_celsiusf(fahrenheit):
@@ -66,7 +74,8 @@ def test_conversion():
     assert ((f_test == f) and (c_test == c))
 
 
-if __name__ == '__main__':
+if __name__ == '__main__':  # having this makes it so when we can test these values in this file but other/
+    # files wont use it if convert_temp.py is imported into them
     print(calc_temperatures('kelvin', 273))  # output 0 and 32
     print(calc_temperatures('celsius', 0))  # output 273 and 32
     print(calc_temperatures('fahrenheit', 32))  # output 273 and 0
